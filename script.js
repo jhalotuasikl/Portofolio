@@ -94,6 +94,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // GitHub Pages bersifat case-sensitive. Untuk gambar RAMERAME,
+  // coba beberapa variasi nama/ekstensi sebelum menampilkan placeholder.
+  const ramerameImage = document.getElementById("ramerameImage");
+  if (ramerameImage) {
+    const candidates = (ramerameImage.dataset.srcCandidates || "")
+      .split("|")
+      .map((value) => value.trim())
+      .filter(Boolean);
+
+    let candidateIndex = Math.max(
+      candidates.indexOf(ramerameImage.getAttribute("src")),
+      0,
+    );
+
+    ramerameImage.addEventListener("error", () => {
+      candidateIndex += 1;
+      if (candidateIndex < candidates.length) {
+        ramerameImage.src = candidates[candidateIndex];
+      }
+    });
+  }
+
   // Keep the layout attractive even before optional images are uploaded.
   document.querySelectorAll(".media-shell img").forEach((image) => {
     const shell = image.closest(".media-shell");

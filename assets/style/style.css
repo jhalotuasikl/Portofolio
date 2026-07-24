@@ -1205,6 +1205,16 @@ a {
   background: #111;
 }
 
+/* Card RAMERAME tidak bergantung pada reveal observer agar tidak menghilang
+   ketika berada pada baris terakhir grid. */
+.gallery-card-ramerame {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  clip-path: none !important;
+  filter: none !important;
+}
+
 .gallery-card.gallery-wide {
   grid-column: span 2;
 }
