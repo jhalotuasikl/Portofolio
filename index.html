@@ -1,333 +1,381 @@
 <!doctype html>
-<html lang="en">
- <head>
+<html lang="id">
+<head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>halo tes</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/style/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Portofolio Afrizal Halim Naindhy Tuasikal — Web & Mobile Developer, UI Designer, dan Graphic Designer.">
+  <meta name="theme-color" content="#090909">
+  <title>Jhalopax — Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=DM+Sans:wght@400;500;600;700;800&family=Lobster&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-  
-
+  <link rel="stylesheet" href="assets/style/style.css">
+  <noscript>
+    <style>
+      .page-loader { display: none !important; }
+      .reveal, .reveal-inner { opacity: 1 !important; transform: none !important; clip-path: none !important; filter: none !important; }
+    </style>
+  </noscript>
 </head>
+<body>
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-crack"></div>
+    <div class="loader-mark">J-PAX</div>
+    <div class="loader-line"><span></span></div>
+  </div>
 
-  <body class="hal-1 ">
-<nav id="navbar">
-  <div class="nav text-center">
-    
-      <li class="nav-item">
-        <a class="nav-link"  href="#profile">Profile</a>
-      </li>
-      <li class="nav-item">
+  <div class="site-backdrop" aria-hidden="true">
+    <span class="shard shard-1"></span>
+    <span class="shard shard-2"></span>
+    <span class="shard shard-3"></span>
+    <span class="shard shard-4"></span>
+    <span class="crack crack-1"></span>
+    <span class="crack crack-2"></span>
+  </div>
+
+  <header class="site-header" id="navbar">
+    <div class="nav-shell">
+      <a class="brand" href="#profile" aria-label="Jhalopax beranda">
+        <span class="brand-script">Jhalopax</span>
+        <span class="brand-dot"></span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-controls="siteNav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="siteNav" aria-label="Navigasi utama">
+        <a class="nav-link" href="#profile">Profile</a>
         <a class="nav-link" href="#biodata">Biodata</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" href="#about">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#gallery">Gallery</a>
-      </li>
-      <li class="nav-item">
+        <a class="nav-link" href="#project">Project</a>
+        <a class="nav-link" href="#gallery">Moment</a>
         <a class="nav-link" href="#contact">Contact</a>
-      </li>
-  </div>
-</nav>
-    
-  <section id="profile" class="scroll-element">
-        <div class="container">
-          <h1 class="text-center"></h1> 
-            <div class="profile" >
-              <img class=" image" src="assets/style/image/Jhalopax.jpeg.jpeg" 
-              alt="Profile" class="image" style="margin-bottom: 50px;" >
-               <div class="profile-text">
-                <h2>Afrizal Halim Naindhy Tuasikal</h2>
-              <h4>As Jhalopax</h4>
-              </div>
-            </div> 
-        </div>
-         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="white" fill-opacity="1" d="M0,64L24,74.7C48,85,96,107,144,133.3C192,160,240,192,288,186.7C336,181,384,139,432,128C480,117,528,139,576,128C624,117,672,75,720,85.3C768,96,816,160,864,176C912,192,960,160,1008,128C1056,96,1104,64,1152,74.7C1200,85,1248,139,1296,160C1344,181,1392,171,1416,165.3L1440,160L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"></path></svg>
-  </section>
+      </nav>
+    </div>
+  </header>
 
-
-      
-      <section id="biodata" class="scroll-element">
-          <div class="decor-left d-none d-md-block"></div>
-          <div class="decor-right d-none d-md-block"></div>
-
-        <div class="container">
-          <div class="biotext">
-            <h1 style="color: #000; margin-bottom: 50px; font-size: 78px; font-weight: 1000; text-align: left;">BIODATA</h1>
+  <main>
+    <section id="profile" class="section hero-section">
+      <div class="section-inner hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal reveal-slice" data-delay="0">PORTFOLIO / 2026</p>
+          <h1 class="hero-title reveal reveal-left" data-delay="100">
+            <span class="hero-title-main">Afrizal Halim</span>
+            <span class="hero-title-main">Naindhy Tuasikal</span>
+          </h1>
+          <p class="hero-alias reveal reveal-pop" data-delay="260">As <strong>Jhalopax</strong></p>
+          <p class="hero-description reveal reveal-right" data-delay="380">
+            Saya merancang pengalaman digital yang kuat secara visual dan membangunnya menjadi produk web maupun mobile yang berguna, responsif, dan mudah digunakan.
+          </p>
+          <div class="hero-actions reveal reveal-up" data-delay="520">
+            <a class="button button-light" href="#project">Lihat Project <i class="fa-solid fa-arrow-down"></i></a>
+            <a class="button button-ghost" href="mailto:tuasikal230104@gmail.com">Hubungi Saya</a>
           </div>
-          
-              <div class="row justify-content-center">
-                <div class="col-md-4 mb-3 ">
-                    <div class="card p-2 justify-content: center;" style=" background-image: url(assets/style/image/background.png) ;" >
-                    <div  style="font-style: normal;color: white;">
-                        <h2 class="text-center" style="font-style: normal;color:white;">Tentang Saya</h2>
+        </div>
 
-                        <h5 class="text-center" style="font-style: italic;color:white;">Informasi Pribadi </h5>
-                        <p><strong>Nama Lengkap:</strong> Afrizal Halim Naindhy Tuasikal</p>
-                        <p><strong>Panggilan:</strong> Jhalopax</p>
-                        <p><strong>Tempat Tanggal Lahir:</strong>Ambon 23 Januari 2004</p>
-                        <p><strong>Alamat:</strong> 969F+5HJ, Unnamed Road, Waiheru, Kec. Baguala, Kota Ambon, Maluku</p>
-                        <p><strong>No. Telepon:</strong> +6282230900302</p>
-                        <p><strong>Email:</strong> tuasikal230104@gmail.com</p>
-                        
-                        <h5 class="text-center"style="font-style: italic;color:white;">Pendidikan</h5>
-                        <ul>
-                            <li><strong>Sekolah Dasar (SD):</strong> SDN 91 Waiheru (2009 - 2015)</li>
-                            <li><strong>Sekolah Menengah Pertama (SMP):</strong> SMPN 13 Ambon (2015 - 2018)</li>
-                            <li><strong>Sekolah Menengah Atas (SMA):</strong> SMAN 3 Ambon (2018 - 2021)</li>
-                        </ul>
-                    </div>
-                    <div style="font-style: italic; color: #ffffff;"> <p>"Aku tak butuh banyak, hanya ruang untuk bernapas tenang, dan kebebasan untuk menjalani hidup dengan caraku."</p></div>
-                    
-                    </div>            
-                    </div>
-                </div>
-                <div class="list">
-                <h1 style="color: #000; font-size: 50px; font-weight: 1000; ;">SKILLS</h1>
-                <div class="list-content" style= "font-weight: bold; font-size: 30px;">
-                            <li>UI Designer</li>
-                            <li>Web And Mobile Developer</li>
-                            <li>Graphic Designer</li>
-                        </div>
-                </div>
+        <div class="hero-visual reveal reveal-rotate" data-delay="180">
+          <div class="portrait-stage">
+            <div class="portrait-halo"></div>
+            <div class="portrait-frame media-shell" data-fallback="JHALOPAX">
+              <img src="assets/style/image/Jhalopax.jpeg.jpeg" alt="Foto profil Afrizal Tuasikal">
             </div>
-        
+            <span class="portrait-label label-top">WEB / MOBILE</span>
+            <span class="portrait-label label-bottom">UI / GRAPHIC</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>WEB DEVELOPER</span><b>✦</b><span>MOBILE DEVELOPER</span><b>✦</b><span>UI DESIGNER</span><b>✦</b><span>GRAPHIC DESIGNER</span><b>✦</b>
+          <span>WEB DEVELOPER</span><b>✦</b><span>MOBILE DEVELOPER</span><b>✦</b><span>UI DESIGNER</span><b>✦</b><span>GRAPHIC DESIGNER</span><b>✦</b>
+        </div>
+      </div>
     </section>
-    
-      
-      <section id="about" class="scroll-element">
-        <div class="about" style="color: #ffffff;">
-         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="white" fill-opacity="1" d="M0,128L26.7,117.3C53.3,107,107,85,160,74.7C213.3,64,267,64,320,74.7C373.3,85,427,107,480,101.3C533.3,96,587,64,640,69.3C693.3,75,747,117,800,122.7C853.3,128,907,96,960,106.7C1013.3,117,1067,171,1120,186.7C1173.3,203,1227,181,1280,176C1333.3,171,1387,181,1413,186.7L1440,192L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"></path></svg>
-        </div>
-    <div class="container">
-      <h1 style="color: white; margin-bottom: 50px; font-size: 78px; font-weight: 1000; text-align: left;">ABOUT ME</h1>
-        <div class="text-center">
-          <div class="typing-container">
-            <h2 class="typing" style="color: white;">
-              Saya adalah mahasiswa aktif berkuliah di Universitas Teknologi Yogyakarta, prodi Informatika, yang sedang berfokus pada pengembangan web dan mobile
-            </h2>
-        </div>
-      </div>
-    </div>
 
- <div class="chat-hover-wrapper">
-  <div class="chat-icon">&lt;</div>
-  <div class="chat-bubble ">
-    "Disini, beta banyak balajar dari hidup deng pengalaman . Kadang susah, kadang sanang, tapi samua itu biking katong jadi lebih kuat. 
-    Beta percaya, setiap proses dalam hidup itu bukan cuma cobaan, tapi juga kesempatan par katong bertumbuh dan jadi lebih baik, setiap 
-    hal yang datang itu pasti samua bawa hikmah. Dari Ambon sampe ka Yogyakarta. Setiap sudut akang kota ini, kaya pung carita  -dari langit 
-    sore babunyi suara motor deng oto, sampe malam yang suara angin  datang bawa sanang. Di sini, beta badiri seng sandiri, ada ade, kaka, 
-    tamang dong yang tarus baku kele. Memang katong jauh dari ambon tapi jang lupa akang pela-gandong"
-             <span>— Jhalopax</span>
+    <section id="biodata" class="section section-light">
+      <div class="section-inner">
+        <div class="section-heading reveal reveal-left">
+          <p class="section-kicker">01 / WHO I AM</p>
+          <h2 class="section-title">Biodata</h2>
+          <p class="section-lead">Latar belakang singkat dan kemampuan yang menjadi fondasi cara saya merancang serta mengembangkan produk digital.</p>
+        </div>
+
+        <div class="bio-layout">
+          <article class="bio-card reveal reveal-up" data-delay="100">
+            <div class="card-corner">EDUCATION</div>
+            <h3>Riwayat Pendidikan</h3>
+
+            <div class="education-block">
+              <ol>
+                <li><span>2009—2015</span> SDN 91 Waiheru</li>
+                <li><span>2015—2018</span> SMPN 13 Ambon</li>
+                <li><span>2018—2021</span> SMAN 3 Ambon</li>
+                <li><span>Mahasiswa</span> Informatika, Universitas Teknologi Yogyakarta</li>
+              </ol>
+            </div>
+          </article>
+
+          <div class="skills-panel">
+            <div class="skills-primary">
+              <article class="skill-feature reveal reveal-right" data-delay="80">
+                <span class="skill-number">01</span>
+                <div><h3>Web & Mobile Developer</h3><p>Flutter, HTML, CSS, JavaScript, Flask, REST API, dan integrasi aplikasi end-to-end.</p></div>
+              </article>
+              <article class="skill-feature reveal reveal-right" data-delay="180">
+                <span class="skill-number">02</span>
+                <div><h3>UI Designer</h3><p>Menyusun alur, komponen, prototipe, responsive layout, dan visual interface yang konsisten.</p></div>
+              </article>
+              <article class="skill-feature reveal reveal-right" data-delay="280">
+                <span class="skill-number">03</span>
+                <div><h3>Graphic Designer</h3><p>Branding, poster, materi presentasi, aset promosi, dan eksplorasi komposisi visual.</p></div>
+              </article>
+            </div>
+
+            <div class="skill-cloud reveal reveal-pop" data-delay="360" aria-label="Kemampuan tambahan">
+              <span>Flutter</span><span>Flask</span><span>MySQL</span><span>REST API</span><span>Responsive UI</span><span>Git & GitHub</span><span>Linux VPS</span><span>Nginx</span><span>Deployment</span><span>Problem Solving</span><span>Database Design</span><span>Product Documentation</span>
             </div>
           </div>
-
-<div class="container my-5">
-  <div class="row justify-content-center">
-    
-    <div class="col-md-3 mb-3">
-      <div class="card text-center image-card" style="width: 100%">
-        <img src="assets/style/image/jhalopaxsempro.jpg" class="card-img-top" alt="About Me">
-        <div class="caption"> SEMPROTULUTATION- Sat Set Sat Set  </div>
-      </div>
-    </div>
-
-    <div class="col-md-3 mb-3">
-      <div class="card text-center image-card" style="width: 100%">
-        <img src="assets/style/image/uty.jpg" class="card-img-top" alt="UTY">
-        <div class="caption">Kelas Universitas Teknologi Yogyakarta</div>
-      </div>
-    </div>
-    <div class="col-md-3 mb-3">
-      <div class="card text-center image-card" style="width: 100%">
-        <img src="assets/style/image/uty1.jpg" class="card-img-top" alt="UTY">
-        <div class="caption">Halaman Universitas Teknologi Yogyakarta</div>
-      </div>
-    </div>
-    <div class="col-md-3 mb-3">
-      <div class="card text-center image-card" style="width: 100%">
-        <img src="assets/style/image/mesjiduty.jpg" class="card-img-top" alt="UTY">
-        <div class="caption">Masjid Universitas Teknologi Yogyakarta</div>
-      </div>
-    </div>
-
-  </div>
-</div>
-    
-        <div class="container text-center">
-        <div class="row">
-          <div class=" col-md-3 mb-3">
-            <div class="card text-center image-card">
-              <img src="assets/style/image/Jhalopax deng Rey.jpeg" class="card-img-top" alt="About Me">
-              <div class="caption">DUO</div>
-            </div>
-          </div>
-          <div class=" col-md-3 mb-3">
-            <div class="card text-center image-card">
-              <img src="assets/style/image/WhatsApp Image 2024-10-18 at 17.36.45.jpeg" class="card-img-top" alt="About Me">
-              <div class="caption">TRIO</div>
-              </div>
-            </div>
-          <div class=" col-md-3 mb-3">
-            <div class="card text-center image-card">
-              <img src="assets/style/image/21sq.jpg"  class="card-img-top" alt="About Me">
-              <div class="caption">SQUAD</div> 
-              </div>
-            </div>
-          <div class=" col-md-3 mb-3">
-            <div class="card text-center image-card">
-              <img src="assets/style/image/RAMERAME.jpeg"  class="card-img-top" alt="About Me">
-               <div class="caption">RAMERAME</div>
-              </div>
-            </div>
         </div>
-      </div>
-      <div class="quote-container">
-        <div class="text-center">
-        <blockquote class="quote" style="font-family: comic-sans;">
-          "Menerima kenyataan dengan lapang dada adalah inti dari stoicism, Dengan menerima apa adanya, kita menemukan kebebasan sejati." -Marcus Aurelius
+
+        <blockquote class="statement reveal reveal-slice">
+          “Aku tak butuh banyak, hanya ruang untuk bernapas tenang, dan kebebasan untuk menjalani hidup dengan caraku.”
         </blockquote>
       </div>
-    </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="white" fill-opacity="1" d="M0,32L40,74.7C80,117,160,203,240,218.7C320,235,400,181,480,170.7C560,160,640,192,720,176C800,160,880,96,960,90.7C1040,85,1120,139,1200,149.3C1280,160,1360,128,1400,112L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
-
     </section>
 
-    <section id="Project" class="scroll-element">
-      
-    <div class="container">
-      <div class="row justify-content-center">
-        <header class="text-center">
-          <div class="decor-right-project d-none d-md-block"></div>
-          <h1 style="color: #000; margin-bottom: 5px; font-size: 78px; font-weight: 1000; text-align: right;">PROJECT</h1>
-          <div class="text-center">
-          <h2 class="text-head" style="color: black; font-family: 'Press Start 2P', monospace; margin-bottom: 70px ;
-            "> Project yang sedang saya kerjakan adalah perancangan dan pengembangan aplikasi E-Commerce dengan notifikasi transaksi menggunakan WhatsApp, juga akan menjadi tugas akhir. </h2>
+    <section id="about" class="section section-dark">
+      <div class="section-inner">
+        <div class="section-heading section-heading-light reveal reveal-right">
+          <p class="section-kicker">02 / THE STORY</p>
+          <h2 class="section-title">About Me</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy reveal reveal-left" data-delay="100">
+            <p class="about-highlight">Mahasiswa Informatika yang berfokus pada pengembangan web dan mobile, dengan perhatian kuat pada visual, interaksi, dan kebutuhan pengguna.</p>
+            <p>
+              Saya menikmati proses mengubah masalah menjadi alur yang lebih sederhana: mulai dari merancang tampilan, membangun backend dan database, menghubungkan API, hingga melakukan deployment pada server. Proses panjang tersebut mengajarkan saya untuk teliti, adaptif, dan terus memperbaiki hasil.
+            </p>
+            <p class="dialect-note">
+              “Dari Ambon sampai Yogyakarta, setiap proses bukan cuma cobaan, tetapi kesempatan par katong bertumbuh dan jadi lebih baik.”
+              <span>— Jhalopax</span>
+            </p>
           </div>
-        </header>
-    
-                <div class="col-md-2">
-                        <img src="assets/style/image/project1.png" alt="project 1" class="card-project">
-                </div>
 
-                <div class="col-md-2">
-                        <img src="assets/style/image/project2.png" alt="project 2" class="card-project">
-                </div>
-                <div class="col-md-2">
-                        <img src="assets/style/image/project3.png" alt="project 3" class="card-project">
-                </div>
-                <div class="col-md-2">
-                        <img src="assets/style/image/project4.png" alt="project 4" class="card-project">
-                </div>
-                <div class="col-md-2">
-                        <img src="assets/style/image/sell.png" alt="project 4" class="card-project">
-                </div>
-                <div class="col-md-2">
-                        <img src="assets/style/image/project5.png" alt="project 5" class="card-project">
-                </div>
-                <div class="col-md-2">
-                        <img src="assets/style/image/project6.png" alt="project 6" class="card-project">
-                </div>
-                <div class="col-md-2">
-                        <img src="assets/style/image/project7.png" alt="project 7" class="card-project">
-                </div>
-                <div class="col-md-2">
-                        <img src="assets/style/image/project8.png" alt="project 8" class="card-project">
-                </div>
-                <div class="col-md-2">
-                        <img src="assets/style/image/project9.png" alt="project 9" class="card-project">
-                </div>
-                <div class="col-md-2">
-                        <img src="assets/style/image/project10.png" alt="project 10" class="card-project">
-                </div>
-                <div class="col-md-2">
-                        <img src="assets/style/image/whatsapptransaksi.png" alt="project 10" class="card-project" style="border-radius: 20px;">
-                </div>
-            </div>
+          <div class="about-photo-grid">
+            <figure class="moment-card reveal reveal-up" data-delay="80">
+              <div class="media-shell" data-fallback="SEMPRO"><img src="assets/style/image/jhalopaxsempro.jpg" alt="Momen seminar proposal"></div>
+              <figcaption>Semprotulation — sat set, lanjut bertumbuh.</figcaption>
+            </figure>
+            <figure class="moment-card reveal reveal-up" data-delay="180">
+              <div class="media-shell" data-fallback="UTY"><img src="assets/style/image/uty.jpg" alt="Kelas Universitas Teknologi Yogyakarta"></div>
+              <figcaption>Ruang belajar di Universitas Teknologi Yogyakarta.</figcaption>
+            </figure>
+            <figure class="moment-card reveal reveal-up" data-delay="280">
+              <div class="media-shell" data-fallback="UTY CAMPUS"><img src="assets/style/image/uty1.jpg" alt="Halaman Universitas Teknologi Yogyakarta"></div>
+              <figcaption>Halaman kampus dan perjalanan akademik.</figcaption>
+            </figure>
+            <figure class="moment-card reveal reveal-up" data-delay="380">
+              <div class="media-shell" data-fallback="MASJID UTY"><img src="assets/style/image/mesjiduty.jpg" alt="Masjid Universitas Teknologi Yogyakarta"></div>
+              <figcaption>Ruang tenang di tengah aktivitas kampus.</figcaption>
+            </figure>
+          </div>
         </div>
 
-       
+        <blockquote class="quote-card reveal reveal-pop">
+          <span class="quote-mark">“</span>
+          Menerima kenyataan dengan lapang dada adalah inti dari stoicism. Dengan menerima apa adanya, kita menemukan kebebasan sejati.
+          <cite>— Marcus Aurelius</cite>
+        </blockquote>
+      </div>
     </section>
-   
-      <section id="gallery" class="scroll-element">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="white" fill-opacity="1" d="M0,64L24,101.3C48,139,96,213,144,250.7C192,288,240,288,288,250.7C336,213,384,139,432,144C480,149,528,235,576,250.7C624,267,672,213,720,208C768,203,816,245,864,224C912,203,960,117,1008,106.7C1056,96,1104,160,1152,176C1200,192,1248,160,1296,133.3C1344,107,1392,85,1416,74.7L1440,64L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"></path></svg>
-        <div class="container">
-          <header class="text-center">
-        <h1 style="color: white;">FAVORITES PHOTOS</h1>
-        <p> look how peaceful jogja is</p>
-    </header>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="foto-card">
-                        <img src="assets/style/image/web-gambar1.jpeg" alt="Foto 1" class="foto-img">
-                        <div class="foto-icon" onclick="toggleDeskripsi(this)"><i class="fas fa-info-circle"></i></div> 
-                         <div class="foto-deskripsi">
-                            Pantai Watunene, dengan keindahan alami dan ketenangannya, menekankan pentingnya kesederhanaan dalam hidup. Tanpa keramaian dan kemewahan, pantai ini mengajak kita untuk menghargai keindahan yang sederhana dan alami.
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="foto-card">
-                        <img src="assets/style/image/web-gambar2.jpeg" alt="Foto 2" class="foto-img">
-                        <div class="foto-icon" onclick="toggleDeskripsi(this)"><i class="fas fa-info-circle"></i></div> 
-                         <div class="foto-deskripsi">
-                          Lereng-lereng yang subur dan pemandangan yang indah memberikan rasa damai dan ketenangan. Namun, di balik keindahan itu, ada ketidakpastian yang selalu mengintai.
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="foto-card">
-                        <img src="assets/style/image/web-gambar3.jpeg" alt="Foto 3" class="foto-img">
-                        <div class="foto-icon" onclick="toggleDeskripsi(this)"><i class="fas fa-info-circle"></i></div> 
-                         <div class="foto-deskripsi">
-                          Tugu yang berada di tengah kota menunjukkan bahwa Yogyakarta adalah pusat budaya dan pendidikan, mencerminkan identitas kota yang kaya akan tradisi dan pengetahuan.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="foto-card">
-                        <img src="assets/style/image/web-gambar4.jpeg" alt="Foto 4" class="foto-img">
-                        <div class="foto-icon" onclick="toggleDeskripsi(this)"><i class="fas fa-info-circle"></i></div> 
-                         <div class="foto-deskripsi">
-                          Candi Prambanan dibangun sebagai ungkapan kejayaan dan kekuatan kerajaan Mataram Kuno. Ini menunjukkan semangat perjuangan dan keberanian dalam menghadapi tantangan.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+    <section id="project" class="section section-light project-section">
+      <div class="section-inner">
+        <div class="section-heading reveal reveal-left">
+          <p class="section-kicker">03 / SELECTED WORK</p>
+          <h2 class="section-title">Project</h2>
+          <p class="section-lead">Setiap project diringkas dalam satu card. Tekan bagian preview untuk membuka seluruh dokumentasi gambar dan penjelasannya.</p>
         </div>
 
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="white" fill-opacity="1" d="M0,32L40,74.7C80,117,160,203,240,218.7C320,235,400,181,480,170.7C560,160,640,192,720,176C800,160,880,96,960,90.7C1040,85,1120,139,1200,149.3C1280,160,1360,128,1400,112L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
-        
-    </section>
-    
-    <section id="contact" class="scroll-element">
-      
-       <div class="container">
-              <div class="justify-content mt-1">
-                  <a href="https://wa.me/+6282230900302" target="_blank]" rel="noopener noreferrer" class="icon" style="color: #000; font-size: 30px;">
-                      <i class="fab fa-whatsapp"></i>
-                  </a>
-                  <a href="https://www.instagram.com/rzhlotuasikal_" target="_blank" rel="noopener noreferrer" class="icon" style="color: #000; font-size: 30px;" >
-                      <i class="fab fa-instagram"></i>
-                  </a>
+        <div class="project-stack">
+          <details class="project-card reveal reveal-up" data-project="ecommerce">
+            <summary class="project-summary">
+              <div class="project-index">01</div>
+              <div class="project-summary-copy">
+                <div class="project-meta"><span>Mobile Application</span><span>Flutter · Flask · MySQL</span></div>
+                <h3>E-Commerce Thrifting Digital</h3>
+                <p>Aplikasi jual-beli barang baru dan bekas dengan transaksi multi-item, varian produk, favorit, chat, bukti pembayaran, dan rencana notifikasi WhatsApp.</p>
               </div>
-                
-                <p style="color: #000; font-family: 'Courier New', Courier, monospace; font-weight: bold;  font-size: 20px;">Telepon: (+62) 822-3090-0302</p>
-                <p style="color: #000; font-family: 'Courier New', Courier, monospace; font-weight: bold;  font-size: 20px;" >Email: tuasikal230104@gmail.com</p>
-                  </div>
-    </section>  
+              <span class="project-toggle" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+            </summary>
 
+            <div class="project-body">
+              <div class="project-overview">
+                <div>
+                  <h4>Tentang Project</h4>
+                  <p>Project ini dirancang untuk membantu pengguna menjual dan membeli produk melalui aplikasi mobile. Sistem menghubungkan alur pembeli, penjual, dan admin mulai dari katalog, detail produk, pembayaran, verifikasi transaksi, sampai pencairan dana.</p>
+                </div>
+                <div>
+                  <h4>Tujuan</h4>
+                  <p>Menghasilkan pengalaman transaksi yang jelas, aman, dan mudah diikuti, sekaligus menjadi fondasi pengembangan tugas akhir.</p>
+                </div>
+                <ul class="project-tech">
+                  <li>Flutter</li><li>Flask REST API</li><li>MySQL</li><li>Multi-role flow</li><li>Responsive mobile UI</li><li>WhatsApp integration</li>
+                </ul>
+              </div>
 
+              <div class="phone-gallery" aria-label="Dokumentasi E-Commerce Thrifting Digital">
+                <figure class="phone-shot reveal-inner"><div class="phone-frame media-shell" data-fallback="PROJECT 01"><img loading="lazy" src="assets/style/image/project1.png" alt="Tampilan project E-Commerce 1"></div></figure>
+                <figure class="phone-shot reveal-inner"><div class="phone-frame media-shell" data-fallback="PROJECT 02"><img loading="lazy" src="assets/style/image/project2.png" alt="Tampilan project E-Commerce 2"></div></figure>
+                <figure class="phone-shot reveal-inner"><div class="phone-frame media-shell" data-fallback="PROJECT 03"><img loading="lazy" src="assets/style/image/project3.png" alt="Tampilan project E-Commerce 3"></div></figure>
+                <figure class="phone-shot reveal-inner"><div class="phone-frame media-shell" data-fallback="PROJECT 04"><img loading="lazy" src="assets/style/image/project4.png" alt="Tampilan project E-Commerce 4"></div></figure>
+                <figure class="phone-shot reveal-inner"><div class="phone-frame media-shell" data-fallback="SELL"><img loading="lazy" src="assets/style/image/sell.png" alt="Tampilan penjualan E-Commerce"></div></figure>
+                <figure class="phone-shot reveal-inner"><div class="phone-frame media-shell" data-fallback="PROJECT 05"><img loading="lazy" src="assets/style/image/project5.png" alt="Tampilan project E-Commerce 5"></div></figure>
+                <figure class="phone-shot reveal-inner"><div class="phone-frame media-shell" data-fallback="PROJECT 06"><img loading="lazy" src="assets/style/image/project6.png" alt="Tampilan project E-Commerce 6"></div></figure>
+                <figure class="phone-shot reveal-inner"><div class="phone-frame media-shell" data-fallback="PROJECT 07"><img loading="lazy" src="assets/style/image/project7.png" alt="Tampilan project E-Commerce 7"></div></figure>
+                <figure class="phone-shot reveal-inner"><div class="phone-frame media-shell" data-fallback="PROJECT 08"><img loading="lazy" src="assets/style/image/project8.png" alt="Tampilan project E-Commerce 8"></div></figure>
+                <figure class="phone-shot reveal-inner"><div class="phone-frame media-shell" data-fallback="PROJECT 09"><img loading="lazy" src="assets/style/image/project9.png" alt="Tampilan project E-Commerce 9"></div></figure>
+                <figure class="phone-shot reveal-inner"><div class="phone-frame media-shell" data-fallback="PROJECT 10"><img loading="lazy" src="assets/style/image/project10.png" alt="Tampilan project E-Commerce 10"></div></figure>
+                <figure class="phone-shot reveal-inner"><div class="phone-frame media-shell" data-fallback="WHATSAPP"><img loading="lazy" src="assets/style/image/whatsapptransaksi.png" alt="Notifikasi transaksi WhatsApp"></div></figure>
+              </div>
+            </div>
+          </details>
 
-        <footer class="footer">
-  <p style="color: #ffffff; font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size: 15px; text-align: left;" > Karang Geneng, Sendangadi, Kec. Mlati, Kabupaten Sleman, Daerah Istimewa Yogyakarta.</p>
-  <div class="foot" style="text-align: left; font-weight: bold;">© 2025 <strong>J-Pax</strong>  Made in Maluku  All Rights Reserved.</div>
-</footer>
-    <script src="script.js"></script>
-  </body>
-</html>           
+          <details class="project-card reveal reveal-up" data-project="sikapal">
+            <summary class="project-summary">
+              <div class="project-index">02</div>
+              <div class="project-summary-copy">
+                <div class="project-meta"><span>Academic Mobile System</span><span>Flutter · Flask · MySQL · VPS</span></div>
+                <h3>SI-KAPAL</h3>
+                <p>Sistem Informasi Kehadiran Akademik dan Layanan untuk menghubungkan admin, guru, murid, serta orang tua dalam satu aplikasi sekolah.</p>
+              </div>
+              <span class="project-toggle" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+            </summary>
+
+            <div class="project-body">
+              <div class="project-overview">
+                <div>
+                  <h4>Tentang SI-KAPAL</h4>
+                  <p>SI-KAPAL membantu pengelolaan akun, kelas, mata pelajaran, jadwal, kehadiran, nilai, laporan mengajar, monitoring, pengaduan, kuisioner, serta informasi akademik berdasarkan hak akses tiap pengguna.</p>
+                </div>
+                <div>
+                  <h4>Tujuan Aplikasi</h4>
+                  <p>Menyederhanakan administrasi akademik, mempercepat pelaporan, dan memberi akses informasi yang terstruktur bagi sekolah, guru, murid, serta orang tua/wali.</p>
+                </div>
+                <ul class="project-tech">
+                  <li>Flutter</li><li>Flask + Gunicorn</li><li>MySQL</li><li>Nginx + HTTPS</li><li>Role-based access</li><li>Excel reporting</li>
+                </ul>
+              </div>
+
+              <p class="upload-note"><i class="fa-solid fa-circle-info"></i> Unggah gambar ke folder <code>assets/style/image/</code> dengan nama <strong>SIKAPAL1.png</strong> sampai <strong>SIKAPAL10.png</strong>. Bingkai mobile akan diterapkan otomatis.</p>
+
+              <div class="phone-gallery phone-gallery-sikapal" aria-label="Dokumentasi SI-KAPAL">
+                <figure class="phone-shot reveal-inner"><div class="phone-frame media-shell" data-fallback="SIKAPAL 01"><img loading="lazy" src="assets/style/image/SIKAPAL1.png" alt="Tampilan SI-KAPAL 1"></div></figure>
+                <figure class="phone-shot reveal-inner"><div class="phone-frame media-shell" data-fallback="SIKAPAL 02"><img loading="lazy" src="assets/style/image/SIKAPAL2.png" alt="Tampilan SI-KAPAL 2"></div></figure>
+                <figure class="phone-shot reveal-inner"><div class="phone-frame media-shell" data-fallback="SIKAPAL 03"><img loading="lazy" src="assets/style/image/SIKAPAL3.png" alt="Tampilan SI-KAPAL 3"></div></figure>
+                <figure class="phone-shot reveal-inner"><div class="phone-frame media-shell" data-fallback="SIKAPAL 04"><img loading="lazy" src="assets/style/image/SIKAPAL4.png" alt="Tampilan SI-KAPAL 4"></div></figure>
+                <figure class="phone-shot reveal-inner"><div class="phone-frame media-shell" data-fallback="SIKAPAL 05"><img loading="lazy" src="assets/style/image/SIKAPAL5.png" alt="Tampilan SI-KAPAL 5"></div></figure>
+                <figure class="phone-shot reveal-inner"><div class="phone-frame media-shell" data-fallback="SIKAPAL 06"><img loading="lazy" src="assets/style/image/SIKAPAL6.png" alt="Tampilan SI-KAPAL 6"></div></figure>
+                <figure class="phone-shot reveal-inner"><div class="phone-frame media-shell" data-fallback="SIKAPAL 07"><img loading="lazy" src="assets/style/image/SIKAPAL7.png" alt="Tampilan SI-KAPAL 7"></div></figure>
+                <figure class="phone-shot reveal-inner"><div class="phone-frame media-shell" data-fallback="SIKAPAL 08"><img loading="lazy" src="assets/style/image/SIKAPAL8.png" alt="Tampilan SI-KAPAL 8"></div></figure>
+                <figure class="phone-shot reveal-inner"><div class="phone-frame media-shell" data-fallback="SIKAPAL 09"><img loading="lazy" src="assets/style/image/SIKAPAL9.png" alt="Tampilan SI-KAPAL 9"></div></figure>
+                <figure class="phone-shot reveal-inner"><div class="phone-frame media-shell" data-fallback="SIKAPAL 10"><img loading="lazy" src="assets/style/image/SIKAPAL10.png" alt="Tampilan SI-KAPAL 10"></div></figure>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section section-dark gallery-section">
+      <div class="section-inner">
+        <div class="section-heading section-heading-light reveal reveal-right">
+          <p class="section-kicker">04 / PERSONAL ARCHIVE</p>
+          <h2 class="section-title">Moment in Jogja</h2>
+          <p class="section-lead">Potongan perjalanan, tempat, dan orang-orang yang ikut memberi warna selama hidup dan belajar di Yogyakarta.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-card gallery-wide reveal reveal-left" data-delay="40">
+            <div class="media-shell" data-fallback="WATUNENE"><img loading="lazy" src="assets/style/image/web-gambar1.jpeg" alt="Pantai Watunene"></div>
+            <figcaption><strong>Watunene</strong><span>Tenang, sederhana, dan dekat dengan rumah.</span></figcaption>
+          </figure>
+          <figure class="gallery-card reveal reveal-up" data-delay="100">
+            <div class="media-shell" data-fallback="LERENG"><img loading="lazy" src="assets/style/image/web-gambar2.jpeg" alt="Lereng di Yogyakarta"></div>
+            <figcaption><strong>Lereng Jogja</strong><span>Damai di antara hijau dan ketidakpastian perjalanan.</span></figcaption>
+          </figure>
+          <figure class="gallery-card reveal reveal-right" data-delay="160">
+            <div class="media-shell" data-fallback="TUGU"><img loading="lazy" src="assets/style/image/web-gambar3.jpeg" alt="Tugu Yogyakarta"></div>
+            <figcaption><strong>Tugu Jogja</strong><span>Penanda kota, budaya, pendidikan, dan pulang.</span></figcaption>
+          </figure>
+          <figure class="gallery-card gallery-tall reveal reveal-left" data-delay="220">
+            <div class="media-shell" data-fallback="PRAMBANAN"><img loading="lazy" src="assets/style/image/web-gambar4.jpeg" alt="Candi Prambanan"></div>
+            <figcaption><strong>Prambanan</strong><span>Jejak keberanian, kejayaan, dan daya tahan.</span></figcaption>
+          </figure>
+          <figure class="gallery-card reveal reveal-pop" data-delay="280">
+            <div class="media-shell" data-fallback="DUO"><img loading="lazy" src="assets/style/image/Jhalopax deng Rey.jpeg" alt="Momen bersama Rey"></div>
+            <figcaption><strong>Duo</strong><span>Teman perjalanan, cerita yang tidak selalu perlu direncanakan.</span></figcaption>
+          </figure>
+          <figure class="gallery-card gallery-wide reveal reveal-up" data-delay="340">
+            <div class="media-shell" data-fallback="TRIO"><img loading="lazy" src="assets/style/image/WhatsApp Image 2024-10-18 at 17.36.45.jpeg" alt="Momen trio di Yogyakarta"></div>
+            <figcaption><strong>Trio</strong><span>Jauh dari Ambon, tetapi seng pernah benar-benar sendiri.</span></figcaption>
+          </figure>
+          <figure class="gallery-card reveal reveal-right" data-delay="400">
+            <div class="media-shell" data-fallback="SQUAD"><img loading="lazy" src="assets/style/image/21sq.jpg" alt="Momen bersama squad"></div>
+            <figcaption><strong>Squad</strong><span>Baku kele, baku bantu, dan tumbuh bersama.</span></figcaption>
+          </figure>
+          <figure class="gallery-card reveal reveal-slice" data-delay="460">
+            <div class="media-shell" data-fallback="RAMERAME"><img loading="lazy" src="assets/style/image/RAMERAME.jpeg" alt="Momen ramai-ramai"></div>
+            <figcaption><strong>Rame-rame</strong><span>Momen kecil yang nanti terasa paling besar.</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="section-inner contact-grid">
+        <div class="contact-copy reveal reveal-left">
+          <p class="section-kicker">05 / LET'S CONNECT</p>
+          <h2 class="contact-title">Punya ide?<br><span>Katong biking.</span></h2>
+          <p>Terbuka untuk diskusi project web, aplikasi mobile, UI, desain visual, kolaborasi, dan peluang belajar baru.</p>
+        </div>
+        <div class="contact-actions reveal reveal-right" data-delay="140">
+          <a href="mailto:tuasikal230104@gmail.com"><i class="fa-regular fa-envelope"></i><span>Email</span><strong>tuasikal230104@gmail.com</strong></a>
+          <a href="tel:+6282230900302"><i class="fa-solid fa-phone"></i><span>Telepon</span><strong>+62 822-3090-0302</strong></a>
+          <a href="https://wa.me/6282230900302" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span><strong>Chat langsung</strong></a>
+          <a href="https://www.instagram.com/rzhlotuasikal_" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i><span>Instagram</span><strong>@rzhlotuasikal_</strong></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-shard" aria-hidden="true"></div>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-script">Jhalopax</span>
+        <p>Web & Mobile Developer · UI Designer · Graphic Designer</p>
+      </div>
+      <div class="footer-links" aria-label="Kontak footer">
+        <a href="tel:+6282230900302"><i class="fa-solid fa-phone"></i> +62 822-3090-0302</a>
+        <a href="mailto:tuasikal230104@gmail.com"><i class="fa-regular fa-envelope"></i> tuasikal230104@gmail.com</a>
+        <a href="https://wa.me/6282230900302" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://www.instagram.com/rzhlotuasikal_" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> @rzhlotuasikal_</a>
+      </div>
+      <div class="footer-bottom">
+        <p>Karang Geneng, Sendangadi, Mlati, Sleman, Daerah Istimewa Yogyakarta.</p>
+        <p>© <span id="currentYear">2026</span> J-Pax · Made in Maluku · All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-up"></i></button>
+  <script src="script.js"></script>
+</body>
+</html>

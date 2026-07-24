@@ -1,35 +1,113 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const scrollElements = document.querySelectorAll(".scroll-element");
+"use strict";
 
-    const elementInView = (el, dividend = 1) => {
-        return el.getBoundingClientRect().top <= (window.innerHeight || document.documentElement.clientHeight) / dividend;
-    };
+document.addEventListener("DOMContentLoaded", () => {
+  const body = document.body;
+  const loader = document.getElementById("pageLoader");
+  const navbar = document.getElementById("navbar");
+  const navToggle = document.getElementById("navToggle");
+  const siteNav = document.getElementById("siteNav");
+  const navLinks = [...document.querySelectorAll(".nav-link")];
+  const backToTop = document.getElementById("backToTop");
+  const sections = [...document.querySelectorAll("main section[id]")];
+  const projectCards = [...document.querySelectorAll(".project-card")];
 
-    const toggleScrollClass = () => {
-        scrollElements.forEach((el) => {
-            el.classList.toggle("show", elementInView(el, 1));
-        });
+  body.classList.add("loading");
 
-        // Tambahan untuk navbar:
-        const navbar = document.getElementById("navbar");
-        if (window.scrollY > 50) {
-            navbar.classList.add("scrolled");
-        } else {
-            navbar.classList.remove("scrolled");
-        }
-    };
+  window.setTimeout(() => {
+    loader?.classList.add("is-hidden");
+    body.classList.remove("loading");
+  }, 1850);
 
-    // Jalankan saat scroll & saat load awal
-    window.addEventListener("scroll", toggleScrollClass);
-    toggleScrollClass();
+  window.setTimeout(() => loader?.remove(), 2800);
 
-    // Toggle deskripsi gambar (ikon <>)
-    window.toggleDeskripsi = function(icon) {
-        icon.closest('.foto-card').classList.toggle('show-desc');
-    };
+  const closeNavigation = () => {
+    siteNav?.classList.remove("open");
+    navToggle?.setAttribute("aria-expanded", "false");
+    navToggle?.setAttribute("aria-label", "Buka menu navigasi");
+    body.classList.remove("nav-open");
+  };
 
-    // Jika nanti butuh efek tambahan seperti 'bubble', bisa pakai ini
-    window.showBubble = function(element) {
-        element.classList.add('show');
-    };
+  navToggle?.addEventListener("click", () => {
+    const willOpen = !siteNav.classList.contains("open");
+    siteNav.classList.toggle("open", willOpen);
+    navToggle.setAttribute("aria-expanded", String(willOpen));
+    navToggle.setAttribute("aria-label", willOpen ? "Tutup menu navigasi" : "Buka menu navigasi");
+    body.classList.toggle("nav-open", willOpen);
+  });
+
+  navLinks.forEach((link) => link.addEventListener("click", closeNavigation));
+
+  document.addEventListener("click", (event) => {
+    if (!siteNav?.classList.contains("open")) return;
+    if (siteNav.contains(event.target) || navToggle?.contains(event.target)) return;
+    closeNavigation();
+  });
+
+  const revealItems = document.querySelectorAll(".reveal");
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const delay = Number(entry.target.dataset.delay || 0);
+      window.setTimeout(() => entry.target.classList.add("is-visible"), delay);
+      observer.unobserve(entry.target);
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: "0px 0px -8% 0px",
+  });
+
+  revealItems.forEach((item) => revealObserver.observe(item));
+
+  const updateOnScroll = () => {
+    const y = window.scrollY;
+    navbar?.classList.toggle("scrolled", y > 28);
+    backToTop?.classList.toggle("visible", y > 650);
+
+    let activeId = "profile";
+    sections.forEach((section) => {
+      if (y >= section.offsetTop - 180) activeId = section.id;
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.toggle("active", link.getAttribute("href") === `#${activeId}`);
+    });
+  };
+
+  window.addEventListener("scroll", updateOnScroll, { passive: true });
+  updateOnScroll();
+
+  backToTop?.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // Project accordion: only one project is expanded at a time.
+  projectCards.forEach((card) => {
+    card.addEventListener("toggle", () => {
+      if (!card.open) return;
+      projectCards.forEach((other) => {
+        if (other !== card) other.open = false;
+      });
+
+      window.setTimeout(() => {
+        card.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 140);
+    });
+  });
+
+  // Keep the layout attractive even before optional images are uploaded.
+  document.querySelectorAll(".media-shell img").forEach((image) => {
+    const shell = image.closest(".media-shell");
+    const markMissing = () => shell?.classList.add("is-missing");
+    const markLoaded = () => shell?.classList.remove("is-missing");
+
+    image.addEventListener("error", markMissing);
+    image.addEventListener("load", markLoaded);
+
+    if (image.complete) {
+      image.naturalWidth > 0 ? markLoaded() : markMissing();
+    }
+  });
+
+  const currentYear = document.getElementById("currentYear");
+  if (currentYear) currentYear.textContent = String(new Date().getFullYear());
 });
