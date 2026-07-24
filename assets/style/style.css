@@ -292,6 +292,13 @@ a {
   text-shadow: 5px 7px 0 rgba(255,255,255,.12);
 }
 
+/* Jaga ekor huruf script seperti j, g, dan y agar tidak terpotong. */
+#project .section-title,
+#gallery .section-title {
+  line-height: .96;
+  padding-bottom: .12em;
+}
+
 /* Header */
 .site-header {
   position: fixed;
@@ -601,6 +608,10 @@ a {
 }
 
 /* Biodata */
+#biodata .section-inner {
+  padding-bottom: clamp(52px, 5.5vw, 82px);
+}
+
 .bio-layout {
   display: grid;
   grid-template-columns: minmax(330px, .78fr) minmax(480px, 1.22fr);
@@ -1654,6 +1665,16 @@ a {
   .section-inner {
     width: min(calc(100% - 24px), var(--content));
     padding: 76px 0;
+  }
+
+  #biodata .section-inner {
+    padding-bottom: 48px;
+  }
+
+  #project .section-title,
+  #gallery .section-title {
+    line-height: 1;
+    padding-bottom: .14em;
   }
 
   .footer-inner {
