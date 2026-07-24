@@ -609,7 +609,11 @@ a {
 
 /* Biodata */
 #biodata .section-inner {
-  padding-bottom: clamp(52px, 5.5vw, 82px);
+  padding-bottom: clamp(20px, 2vw, 32px);
+}
+
+#about .section-inner {
+  padding-top: clamp(48px, 4.5vw, 70px);
 }
 
 .bio-layout {
@@ -785,13 +789,24 @@ a {
 
 .statement {
   max-width: 980px;
-  margin: clamp(52px, 8vw, 100px) auto 0;
+  margin: clamp(24px, 3vw, 42px) auto 0;
   padding: 28px clamp(24px, 5vw, 60px);
   border-left: 6px solid var(--ink);
   font-family: var(--font-script);
   font-size: clamp(1.8rem, 4vw, 3.5rem);
   line-height: 1.18;
   text-align: center;
+}
+
+.statement-live {
+  opacity: 0;
+  transform: translateY(34px) scale(.985);
+  transition: opacity 1.05s ease, transform 1.05s cubic-bezier(.17,.8,.2,1);
+}
+
+.statement-live.is-visible {
+  opacity: 1;
+  transform: none;
 }
 
 /* About */
@@ -1678,7 +1693,11 @@ a {
   }
 
   #biodata .section-inner {
-    padding-bottom: 48px;
+    padding-bottom: 18px;
+  }
+
+  #about .section-inner {
+    padding-top: 42px;
   }
 
   #project .section-title,
@@ -1829,7 +1848,7 @@ a {
   }
 
   .statement {
-    margin-top: 50px;
+    margin-top: 28px;
     padding: 22px 15px;
     border-left-width: 4px;
     font-size: 1.7rem;

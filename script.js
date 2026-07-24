@@ -58,6 +58,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
   revealItems.forEach((item) => revealObserver.observe(item));
 
+  // Pernyataan Biodata memakai observer khusus dan fallback agar tidak
+  // pernah tetap transparan saat berada di bagian bawah section.
+  const biodataStatement = document.querySelector("#biodata .statement-live");
+  if (biodataStatement) {
+    const showBiodataStatement = () => {
+      biodataStatement.classList.add("is-visible");
+    };
+
+    if ("IntersectionObserver" in window) {
+      const statementObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          showBiodataStatement();
+          observer.unobserve(entry.target);
+        });
+      }, {
+        threshold: 0.02,
+        rootMargin: "0px 0px 18% 0px",
+      });
+
+      statementObserver.observe(biodataStatement);
+    } else {
+      showBiodataStatement();
+    }
+
+    // Fallback terakhir: elemen tetap tampil walaupun observer browser gagal.
+    window.setTimeout(showBiodataStatement, 2200);
+  }
+
   const updateOnScroll = () => {
     const y = window.scrollY;
     navbar?.classList.toggle("scrolled", y > 28);
